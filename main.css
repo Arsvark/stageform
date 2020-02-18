@@ -1,0 +1,23 @@
+/* main.css */
+
+ul {
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+
+
+
+}
+
+li a {
+    display: block;
+    width: 20 %;
+}
+
+p{
+    margin-left: 21%;
+    padding: 1px 16px;
+    height: auto;
+}
