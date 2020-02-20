@@ -1,23 +1,34 @@
 /* main.css */
 
+h1{
+    text-align: center;
+    display: inline;
+}
+
+body{
+    position: relative;
+}
+
 ul {
-
     list-style-type: none;
-    margin: 0;
-    padding: 0;
-    position: fixed;
-
-
-
+    position: relative;
 }
 
 li a {
     display: block;
-    width: 20 %;
+    width: 20 px;
+}
+
+.login {
+   
+    float: right;
+    position: auto;
 }
 
 p{
     margin-left: 21%;
     padding: 1px 16px;
     height: auto;
+    position: relative;
+    margin-top: 10%;
 }

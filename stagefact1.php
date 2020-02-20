@@ -1,5 +1,12 @@
 <!-- stagefact1.php -->
 
+<?php
+
+session_start();
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,20 +20,48 @@
 
 </head>
 <body>
-    <h1><a href="stagefact1.php">Bienvenue sur le site de facturation</a></h1>
+<h1><a href="stagefact1.php">Bienvenue sur le site de facturation</a></h1>
 
-<?php include ('menu.php'); ?>
+<?php
+if ( isset($_SESSION['login']) && isset($_SESSION['$password'])) {
+
+    echo 'Bonjour '.$_SESSION['login'].'voici le '.$_SESSION['password'].'.';
+
+    echo'<a href="out.php">Deconnexion</a>';
+
+}
+else {
+
+?>
+
+    <nav>
+            <form class="login" action="valid.php" method="POST">
+                <input name="login" placeholder="login" type="text"><br>
+                <input name="password" placeholder="mot de passe" type="text">
+                <input class="submit" type="submit" value="Envoi">
+            </form>
+    </nav>
 
 
-<p>page de garde facturation    </p>   
+    
+<?php 
+}
 
-<p>page de garde facturation page de garde facturation page de garde facturation page de garde facturation page de garde facturation page de garde facturation page de garde facturation page de garde facturation page de garde facturation page de garde facturation page de garde facturation page de garde facturation    </p>   
-<p>page de garde facturation    </p>   
+include ('menu.php'); ?>
 
-<p>page de garde facturation    </p>   <br>
+<p> 
+
+<?php
+
+echo 'Bonjour '.$_SESSION['login'].'voici le '.$_SESSION['password'].'.';
+
+echo'<a href="out.php">Deconnexion</a>';
+
+?>
 
 
-
-
+<footer>
+    <p>© Mentions Légales</p>
+</footer>
 </body>
 </html>
