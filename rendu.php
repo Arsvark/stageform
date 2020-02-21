@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+$log = $_SESSION['login'];
+
+if($log == NULL){
+        header('location: connet.php');
+}
+else{
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,4 +61,7 @@ votre total de <?php echo"$fact"; ?> est de <?php echo "$prix"; ?> eur.o<br>
 
 </p>
 </body>
+<?php
+}
+?>
 </html>

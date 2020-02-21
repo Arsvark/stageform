@@ -20,15 +20,20 @@ session_start();
 
 </head>
 <body>
-<h1><a href="stagefact1.php">Bienvenue sur le site de facturation</a></h1>
+<h1><a href="connet.php">Bienvenue sur le site de facturation</a></h1>
 
 <?php
-if ( isset($_SESSION['login']) && isset($_SESSION['$password'])) {
 
-    echo 'Bonjour '.$_SESSION['login'].'voici le '.$_SESSION['password'].'.';
+echo 'Bonjour '.$_SESSION['login'].' voici le '.$_SESSION['password'].'.';
 
-    echo'<a href="out.php">Deconnexion</a>';
+echo'<a href="out.php">Deconnexion</a>';
 
+$log = $_SESSION['login'];
+
+
+if($log === NULL){
+
+        header('location: connet.php');
 }
 else {
 
@@ -51,13 +56,6 @@ include ('menu.php'); ?>
 
 <p> 
 
-<?php
-
-echo 'Bonjour '.$_SESSION['login'].'voici le '.$_SESSION['password'].'.';
-
-echo'<a href="out.php">Deconnexion</a>';
-
-?>
 
 
 <footer>

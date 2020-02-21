@@ -9,13 +9,10 @@ body{
     position: relative;
 }
 
-ul {
-    list-style-type: none;
-    position: relative;
-}
+
 
 li a {
-    display: block;
+    
     width: 20 px;
 }
 

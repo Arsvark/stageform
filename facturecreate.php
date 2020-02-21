@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+$log = $_SESSION['login'];
+
+if($log == NULL){
+        header('location: connet.php');
+}
+else{
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +21,7 @@
 </head>
 <body>
     
-        <h1><a href="stagefact1.php">Bienvenue sur le site de facturation</a></h1>
+        <h1><a href="connet.php">Bienvenue sur le site de facturation</a></h1>
         <?php include ('menu.php'); ?>
 
         <form action="rendu.php" method="post">
@@ -59,4 +71,6 @@
 
 
 </body>
+<?php }
+?>
 </html>
